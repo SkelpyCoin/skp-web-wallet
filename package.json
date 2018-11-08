@@ -1,0 +1,47 @@
+{
+  "name": "skp-web-wallet",
+  "version": "1.0.4",
+  "description": "Skelpy Web Wallet",
+  "homepage": "https://github.com/SkelpyCoin/skp-web-wallet",
+  "bugs": "https://github.com/SkelpyCoin/skp-web-wallet/issues",
+  "scripts": {
+    "start": "electron app",
+    "dist": "npm run dist:macos && npm run dist:linux && npm run dist:win32 && npm run dist:win64",
+    "dist:win64": "build --win --x64",
+    "dist:win32": "build --win --ia32",
+    "dist:macos": "build --macos",
+    "dist:linux": "build --linux",
+    "build": "cd src && npm run build"
+  },
+  "author": {
+    "name": "Guillaume Verbal",
+    "email": "doweig@ark.io",
+    "url": "https://github.com/doweig"
+  },
+  "contributors": [
+    {
+      "name": "Ricardo Ferro",
+      "email": "ricardo@lisk.io",
+      "url": "https://github.com/rferro"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SkelpyCoin/skp-web-wallet"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-builder": "^12.3.1"
+  },
+  "build": {
+    "appId": "co.skelpy.web.wallet",
+    "mac": {
+      "category": "finance"
+    },
+    "productName": "Skelpy Web Wallet",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "license": "MIT"
+}
